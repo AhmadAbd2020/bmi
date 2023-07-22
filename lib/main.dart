@@ -1,7 +1,7 @@
-import 'package:bmi_tt9/constants.dart';
-import 'package:bmi_tt9/screens/input_screen.dart';
-import 'package:bmi_tt9/widgets/my_fab.dart';
+import 'package:bmi/constants.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/input_screen.dart';
 
 void main() => runApp(const BMICalculator());
 
@@ -11,6 +11,7 @@ class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
         appBarTheme:
@@ -23,5 +24,3 @@ class BMICalculator extends StatelessWidget {
     );
   }
 }
-
-

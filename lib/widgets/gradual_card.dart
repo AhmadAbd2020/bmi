@@ -1,4 +1,4 @@
-import 'package:bmi_tt9/widgets/my_fab.dart';
+import 'package:bmi/widgets/my_fab.dart';
 import 'package:flutter/material.dart';
 
 class GradualCard extends StatelessWidget {

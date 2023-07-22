@@ -2,13 +2,14 @@
 
 import 'dart:math';
 
-import 'package:bmi_tt9/brain/bmi_brain.dart';
-import 'package:bmi_tt9/screens/result_screen.dart';
-import 'package:bmi_tt9/widgets/gender.dart';
-import 'package:bmi_tt9/widgets/gradual_card.dart';
-import 'package:bmi_tt9/widgets/my_button.dart';
-import 'package:bmi_tt9/widgets/my_card.dart';
+import 'package:bmi/brain/bmi_brain.dart';
+import 'package:bmi/widgets/gender.dart';
+import 'package:bmi/widgets/gradual_card.dart';
+import 'package:bmi/widgets/my_button.dart';
+import 'package:bmi/widgets/my_card.dart';
 import 'package:flutter/material.dart';
+
+import 'result_screen.dart';
 
 class InputScreen extends StatefulWidget {
   const InputScreen({super.key});

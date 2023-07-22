@@ -1,40 +1,16 @@
-
+import 'package:bmi/brain/bmi_brain.dart';
+import 'package:bmi/screens/input_screen.dart';
+import 'package:bmi/widgets/my_button.dart';
+import 'package:bmi/widgets/my_card.dart';
 import 'package:flutter/material.dart';
 
-import 'package:bmi_tt9/screens/input_screen.dart';
-import 'package:bmi_tt9/widgets/my_button.dart';
-import 'package:bmi_tt9/widgets/my_card.dart';
-
 class ResultScreen extends StatelessWidget {
-  const ResultScreen({
+   ResultScreen({
     Key? key,
     required this.result,
   }) : super(key: key);
   final double result;
-
-  String get resultCategory {
-    String res = '';
-    if (18.5 <= result && result <= 24.9) {
-      res = 'Normal';
-    } else if (result < 18.5) {
-      res = 'Underweight';
-    } else {
-      res = 'Overweight';
-    }
-    return res;
-  }
-
-  String get resultPhrase {
-    String res = '';
-    if (18.5 <= result && result <= 24.9) {
-      res = 'You are too good, Keep it up';
-    } else if (result < 18.5) {
-      res = 'You need to eat more to be  healthy';
-    } else {
-      res = 'You need more practice';
-    }
-    return res;
-  }
+  final BMIBrain bmiBrain = BMIBrain();
 
   @override
   Widget build(BuildContext context) {
@@ -51,19 +27,19 @@ class ResultScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                resultCategory,
+                bmiBrain.resultCategory(result),
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 48),
+                style: const TextStyle(fontSize: 48),
               ),
               Text(
                 result.toStringAsFixed(1),
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 48),
+                style: const TextStyle(fontSize: 48),
               ),
               Text(
-                resultPhrase,
+                bmiBrain.resultPhrase(result),
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 48),
+                style: const TextStyle(fontSize: 48),
               ),
             ],
           ))),
